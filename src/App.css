@@ -1,0 +1,68 @@
+
+
+.RotateboxRight {
+  animation: BounceRight 1s infinite;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes BounceRight {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.RotateboxLeft {
+  animation: BounceLeft 1s infinite;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@keyframes BounceLeft {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-video::-webkit-media-controls {
+  display: none !important;
+}
+
+.custom-video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+.custom-video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+/* General fallback for other browsers */
+.custom-video {
+  pointer-events: none;
+  /* Prevent interactions with controls */
+}
+
+.Thai {
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.Thai-light {
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.Thai-MD {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
