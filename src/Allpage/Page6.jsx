@@ -4,13 +4,13 @@ import "../App.css";
 export default function Page5() {
   const [count, setCount] = useState(0);
   return (
-    <section className=" relative w-screen h-screen bg-[#F2CF67] text-[#313131]" id="page6">
+    <section className=" relative w-screen h-screen bg-[#F2CF67] text-black" id="page6">
       <div className="w-full h-full flex flex-col">
         <div className="w-full h-[15%] content-center items-center justify-items-center  ">
-          <h1 className="Thai text-4xl text-center mb-3 text-[#313131] ">
+          <h1 className="Thai text-4xl text-center mb-3 ">
             🎯 ทำไมต้องเลือกเรา?
           </h1>
-          <div className="w-[22%] self-center bg-[#313131] h-[0.35rem] rounded-full"></div>
+          <div className="w-[20%] self-center bg-black h-[0.35rem] rounded-full"></div>
         </div>
         {/* Set 1 */}
         <div className="grid grid-cols-2 gap-2 z-20 mb-7">
