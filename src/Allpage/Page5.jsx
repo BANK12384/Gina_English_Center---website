@@ -28,8 +28,8 @@ export default function Page5() {
   return (
     <section className="w-screen h-screen relative overflow-hidden" id="classroom">
       <div className="w-full h-[15%] bg-white flex flex-col justify-center items-center shadow-lg">
-        <h1 className="text-4xl Thai">หลักสูตรที่เปิดสอน</h1>
-        <div className="bg-black w-[18%] h-[0.35rem] rounded-full mt-2" />
+        <h1 className="text-4xl Thai">ภาพบรรยากาศ</h1>
+        <div className="bg-black w-[15%] h-[0.35rem] rounded-full mt-2" />
       </div>
       {/* Background image */}
       <SlidePage5 imageUrl={slides[slideIndex].imageUrl} className="z-10"/>
