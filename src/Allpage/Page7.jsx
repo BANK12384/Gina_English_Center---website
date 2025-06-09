@@ -19,10 +19,9 @@ export default function Contact() {
       <div className="w-full h-[10rem] bg-[#24149B] Thai-MD text-white justify-center  flex items-center ">
         <h1 className="text-5xl text-center">✨ พิสูจน์ด้วยตัวคุณเองว่า "ภาษาอังกฤษไม่ยากอย่างที่คิด!" ✨</h1>
       </div>
-
       <div className="map-container w-full h-[40%] max-h-[50rem]">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.1049017572504!2d100.72226557587287!3d13.772546996811325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d65f2209f4c95%3A0x1cfe8836d4de0e56!2sTechademics!5e0!3m2!1sth!2sth!4v1732886393651!5m2!1sth!2sth"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.104462609181!2d100.7222763751369!3d13.772573486621463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d65474153fd97%3A0x57b769058e3cfc1e!2sGina%20English%20Center!5e0!3m2!1sth!2sth!4v1749451537908!5m2!1sth!2sth"
           style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"
