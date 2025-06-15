@@ -84,7 +84,7 @@ export default function Page2() {
           </h1>
           <div className="w-[80%] self-center bg-[#313131] h-1 rounded-full mb-6"></div>
           {/* image */}
-        <div className=" bg-[url('/img/Page2.svg')] w-[80%] h-[18rem] relative bg-cover bg-center bg-fixed inset-0 shadow-md self-center rounded-lg border-2 border-black z-20 "></div>
+        <div className=" bg-[url('/img/Page2.svg')] w-[80%] h-[16rem] relative bg-cover bg-center bg-fixed  inset-0 shadow-md self-center rounded-lg border-2 border-black z-20 "></div>
 
         <div className="w-[80%] h-[40%] flex-col flex mt-4 bg-[#F2CF67] rounded-lg text-[#313131] self-center p-2">
           <p className="Thai w-[90%] self-center text-base     ">
