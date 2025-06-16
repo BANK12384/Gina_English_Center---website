@@ -17,15 +17,19 @@ export default function Contact() {
         </div>
 
         <div className="w-full h-[15rem] text-left text-4xl Thai-light flex flex-col content-center justify-center items-center">
-          <p className="w-[80%]">
+          <p className="lg:w-[90%] xl:w-[80%]">
             📞 <span className="Thai-EX text-[#24149B]">ติดต่อเรา :</span>{" "}
             089-788-0964
           </p>
-          <p className="w-[80%]">
+          <p className="lg:w-[90%] xl:w-[80%] inline-block xl:hidden">
+            📍 <span className="Thai-EX text-[#24149B]">ที่ตั้ง :</span> 253/969
+            ถ.เคหะร่มเกล้า64 เขต ลาดกระบัง <br/> <span className="ml-[9rem]">แขวง คลองสองต้นนุ่น</span>
+          </p>
+          <p className="lg:w-[90%] xl:w-[80%] xl:inline-block hidden">
             📍 <span className="Thai-EX text-[#24149B]">ที่ตั้ง :</span> 253/969
             ถ.เคหะร่มเกล้า64 เขต ลาดกระบัง แขวง คลองสองต้นนุ่น
           </p>
-          <p className="w-[80%]">
+          <p className="lg:w-[90%] xl:w-[80%]">
             📌 <span className="Thai-EX text-[#24149B]">Facebook :</span> Gina
             English Center
           </p>
@@ -35,7 +39,7 @@ export default function Contact() {
             ✨ พิสูจน์ด้วยตัวคุณเองว่า "ภาษาอังกฤษไม่ยากอย่างที่คิด!" ✨
           </h1>
         </div>
-        <div className="map-container w-full h-[40%] max-h-[50rem]">
+        <div className="map-container w-full lg:h-[50%] xl:h-[40%] max-h-[50rem]">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.104462609181!2d100.7222763751369!3d13.772573486621463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d65474153fd97%3A0x57b769058e3cfc1e!2sGina%20English%20Center!5e0!3m2!1sth!2sth!4v1749451537908!5m2!1sth!2sth"
             style={{ border: 0 }}
@@ -57,16 +61,20 @@ export default function Contact() {
           <div className="w-[40%] self-center bg-black h-1 rounded-full mb-0"></div>
         </div>
 
-        <div className="w-full h-[15rem] text-left text-sm Thai-light flex flex-col content-center justify-center items-center self-center">
-          <p className="w-[80%]">
+        <div className="w-full h-[15rem] text-left text-sm sm:text-xl Thai-light flex flex-col content-center  justify-center items-center self-center">
+          <p className="lg:w-[90%] xl:w-[80%] ">
             📞 <span className="Thai-EX text-[#24149B]">ติดต่อเรา :</span>{" "}
             089-788-0964
           </p>
-          <p className="w-[80%]">
+          <p className="lg:w-[90%] xl:w-[80%] flex sm:hidden">
             📍 <span className="Thai-EX text-[#24149B]">ที่ตั้ง :</span> 253/969
             ถ.เคหะร่มเกล้า64 เขต ลาดกระบัง<br/><span className="ml-14">แขวง คลองสองต้นนุ่น</span>
           </p>
-          <p className="w-[80%]">
+          <p className="lg:w-[90%] xl:w-[80%] hidden sm:flex">
+            📍 <span className="Thai-EX text-[#24149B]">ที่ตั้ง :</span> 253/969
+            ถ.เคหะร่มเกล้า64 เขต ลาดกระบัง แขวง คลองสองต้นนุ่น
+          </p>
+          <p className="lg:w-[90%] xl:w-[80%]">
             📌 <span className="Thai-EX text-[#24149B]">Facebook :</span> Gina
             English Center
           </p>

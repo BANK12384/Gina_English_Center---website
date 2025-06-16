@@ -82,7 +82,7 @@ export default function Page5() {
             </div>
           </div>
 
-          <h1 className="text-center Thai-MD text-5xl mt-4">
+          <h1 className="text-center Thai-MD text-3xl mt-[4rem] xl:mt-4">
             สมัครวันนี้! ทำแบบทดสอบวัดระดับฟรี <br />
             อย่าปล่อยให้ภาษาอังกฤษเป็นอุปสรรคอีก
             <br />
@@ -91,7 +91,7 @@ export default function Page5() {
 
           {/* Background image */}
           <div className="absolute grid grid-cols-2 w-full h-full z-10">
-            <div className="absolute grid mt-[41%] justify-end items-end w-full pr-4">
+            <div className="absolute flex flex-col h-full justify-end items-end w-full pr-4">
               <div className="grid grid-cols-7 mb-5 ">
                 <div className="w-2 h-2 bg-black rounded-full mx-3"></div>
                 <div className="w-2 h-2 bg-black rounded-full mx-3"></div>
@@ -139,7 +139,7 @@ export default function Page5() {
               </div>
             </div>
 
-            <div className=" absolute grid mt-10 justify-start items-start w-full pl-4">
+            <div className=" absolute grid mt-10 justify-start items-end w-full pl-4">
               <div className="grid grid-cols-7 mb-5">
                 <div className="w-2 h-2 bg-black rounded-full mx-3"></div>
                 <div className="w-2 h-2 bg-black rounded-full mx-3"></div>

@@ -41,7 +41,7 @@ function Slide({ items, bgColor, imageUrl, openIndex, toggleAccordion }) {
       <div className="lg:grid lg:grid-cols-2 gap-8 items-center w-[90%] h-[90%] text-white mt-8 hidden ">
         {/* Left Image */}
         <div
-          className="w-[70%] h-full bg-cover bg-center border-4 border-white rounded-md self-end ml-[30%]"
+          className="lg:w-[90%] xl:w-[70%] h-full bg-cover bg-center border-4 border-white rounded-md self-end lg:ml-[10%] xl:ml-[30%]"
           style={{ backgroundImage: `url(${imageUrl})` }}
         />
 

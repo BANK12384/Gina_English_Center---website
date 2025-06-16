@@ -26,7 +26,7 @@ export default function Page2() {
         </div>
 
         {/* BG Effect */}
-        <div className=" absolute grid mt-[41%] justify-end items-end w-full pr-4">
+        <div className=" absolute flex flex-col h-full justify-end items-end w-full pr-4">
           <div className="grid grid-cols-7 mb-5">
             <div className="w-2 h-2 bg-black rounded-full mx-3"></div>
             <div className="w-2 h-2 bg-black rounded-full mx-3"></div>
@@ -82,12 +82,12 @@ export default function Page2() {
          <h1 className="Thai text-xl text-center my-2 mt-6 ">
             ⭐ เรียนสนุก เข้าใจง่าย ใช้ได้จริง ⭐
           </h1>
-          <div className="w-[80%] self-center bg-[#313131] h-1 rounded-full mb-6"></div>
+          <div className="w-[80%] sm:w-[50%] self-center bg-[#313131] h-1 rounded-full mb-6"></div>
           {/* image */}
         <div className=" bg-[url('/img/Page2.svg')] w-[80%] h-[16rem] relative bg-cover bg-center bg-fixed  inset-0 shadow-md self-center rounded-lg border-2 border-black z-20 "></div>
 
-        <div className="w-[80%] h-[40%] flex-col flex mt-4 bg-[#F2CF67] rounded-lg text-[#313131] self-center p-2">
-          <p className="Thai w-[90%] self-center text-base     ">
+        <div className="w-[80%] h-[40%] sm:h-[15rem] flex-col flex mt-4 bg-[#F2CF67] rounded-lg text-[#313131] self-center p-2 place-content-center">
+          <p className="Thai w-[90%] self-center text-base sm:text-xl     ">
             ไม่ว่าคุณจะต้องการพัฒนาภาษาอังกฤษเพื่อการเรียน การทำงาน
             หรือการสื่อสารในชีวิตประจำวัน เรามีหลักสูตรที่เหมาะสมสำหรับคุณ!
             ด้วยวิธีการสอนที่เป็นกันเอง เข้าใจง่าย และเน้นการใช้งานจริง
