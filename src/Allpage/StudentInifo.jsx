@@ -42,13 +42,13 @@ export default function Studentinfo() {
         <div className="absolute inset-0 bg-[url('/Untitleddesign(1).png')] bg-center bg-cover z-0"></div>
         <div className="absolute inset-0 bg-black bg-opacity-55 z-10"></div>
 
-        <div className="z-20 flex flex-col mt-[-4rem] items-center px-4 self-center">
-          <h1 className="text-white Eng text-5xl font-bold mb-2">
+        <div className="z-20 w-full flex flex-col mt-[-4rem] items-center px-4 sm:px-0 self-center">
+          <h1 className="text-white Eng text-5xl sm:text-[5rem] font-bold mb-2">
             Student info
           </h1>
-          <div className="w-[85%] h-1 bg-white rounded-full mb-5"></div>
+          <div className="sm:w-[78%] md:w-[65%] h-1 bg-white rounded-full mb-5"></div>
 
-          <div className="bg-white w-[90%] h-[3rem] rounded-lg flex items-center relative px-4">
+          <div className="bg-white w-[80%] h-[3rem] sm:h-[4rem] rounded-lg flex items-center relative px-4">
             <input
               name="myInput"
               type="text"
