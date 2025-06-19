@@ -35,7 +35,7 @@ function SlideSP({ items, imageUrl }) {
             <div
               className={`h-1 lg:h-[0.3rem]  rounded-full lg:my-2 mb-2 lg:mb-0 bg-[#313131] self-center ${item.widthLong}`}
             />
-            <div className="w-[52%] h-[8rem] lg:w-[60%] lg:h-[25rem] bg-black self-center"></div>
+            <div className="w-[52%] h-[8rem] sm:h-[15rem] lg:w-[60%] lg:h-[25rem] bg-black self-center"></div>
           </div>
         ))}
       </div>
@@ -116,14 +116,14 @@ export default function Studentinfo2() {
           <h1 className="text-white Eng text-5xl font-bold mb-2">
             Student info
           </h1>
-          <div className="h-1 w-[80%] bg-white rounded-full mb-10"></div>
+          <div className="h-1 w-[80%] sm:w-[50%] md:w-[40%] bg-white rounded-full mb-10"></div>
         </div>
 
         {/* content card */}
         <div className="bg-[#F2CF67] w-full h-[70%] z-20 flex flex-col shadow-lg px-4 py-6">
           {/* left profile box */}
           <div className="flex flex-col items-center w-full h-full">
-            <div className="bg-black border-[0.2rem] w-[80%] h-[50%] rounded-lg bg-cover bg-center bg-[url('/img/Dan103.png')]"></div>
+            <div className="bg-black border-[0.2rem] w-[80%] h-[50%] sm:w-[60%] rounded-lg bg-cover bg-center bg-[url('/img/Dan103.png')]"></div>
             <div className="w-[30%] h-10 bg-black mt-2 flex justify-center items-center text-white rounded-full">
               <p className="text-center text-lg">NAME</p>
             </div>
@@ -136,13 +136,13 @@ export default function Studentinfo2() {
                 onClick={prevSlide}
                 className="absolute left-4 top-1/2 -translate-y-1/4 bg-[#F2CF67] p-1 rounded-full z-20 RotateboxLeft"
               >
-                <img src="/Left-arrow.svg" alt="←" className="w-5" />
+                <img src="/Left-arrow.svg" alt="←" className="w-5 sm:w-8" />
               </button>
               <button
                 onClick={nextSlide}
                 className="absolute right-4 top-1/2 -translate-y-1/4 bg-[#F2CF67] p-1 rounded-full z-20 RotateboxRight"
               >
-                <img src="/right-arrow.svg" alt="→" className="w-5" />
+                <img src="/right-arrow.svg" alt="→" className="w-5 sm:w-8" />
               </button>
 
               <SlideSP
