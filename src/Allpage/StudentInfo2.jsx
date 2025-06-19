@@ -31,9 +31,9 @@ function SlideSP({ items, imageUrl }) {
             key={index}
             className="mb-6 flex flex-col content-center justify-center"
           >
-            <h1 className="Thai text-center lg:-5xl lg:mt-4 ">{item.title}</h1>
+            <h1 className="Thai text-center lg:-5xl lg:mt-4 lg:text-4xl">{item.title}</h1>
             <div
-              className={`h-1 lg:h-[0.3rem]  rounded-full lg:my-2 mb-2 lg:mb-0 bg-[#313131] self-center ${item.widthLong}`}
+              className={`h-1 lg:h-[0.3rem]  rounded-full lg:my-2 mb-2 lg:mb-4 bg-[#313131] self-center ${item.widthLong}`}
             />
             <div className="w-[52%] h-[8rem] sm:h-[15rem] lg:w-[60%] lg:h-[25rem] bg-black self-center"></div>
           </div>
