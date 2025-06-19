@@ -9,14 +9,14 @@ export default function Studentinfo() {
       className="w-screen h-screen  content-center z-20 text-center justify-center justify-items-center"
       id="Studentinfo"
     >
-      <div className="w-full h-full hidden lg:flex lg:flex-col ">
-        <div className="absolute inset-0 bg-[url('/img/StudentInifo.svg')] bg-center bg-cover bg-fixed h-full z-10"></div>
+      <div className="w-full h-full hidden lg:flex lg:flex-col justify-center">
+        <div className="absolute inset-0 bg-[url('/img/StudentInifo.svg')] bg-center bg-cover h-full z-10"></div>
         <div className="absolute inset-0 bg-black bg-opacity-55 z-10"></div>
         <h1 className="z-20 text-white Eng text-8xl font-bold my-2">
           Student info
         </h1>
-        <div className="px-80 h-1 bg-white z-20 self-center rounded-full mb-10"></div>
-        <div className="bg-white w-[70rem] h-[7.5rem] z-20 rounded-lg flex input-wrapper relative">
+        <div className="w-[60%] xl:w-[45%] 2xl:w-[32%] h-1 bg-white z-20 self-center rounded-full mb-10"></div>
+        <div className="bg-white w-[80%] 2xl:w-[60%]  h-[7.5rem] z-20 rounded-lg flex input-wrapper relative self-center">
           <label className="h-20 self-center w-full mx-7 flex items-center px-4 relative text-center">
             <input
               name="myInput"
