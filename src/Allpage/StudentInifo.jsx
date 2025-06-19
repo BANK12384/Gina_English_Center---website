@@ -23,7 +23,7 @@ export default function Studentinfo() {
         return;
       }
       const { data, error } = await supabase
-        .from('English scores')
+        .from('english-score')
         .select('reading, writing, gramma_vocab,listening,speaking, students(id)')
 
         .eq('students.username', `${searchTerm}`);
