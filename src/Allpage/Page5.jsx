@@ -47,7 +47,7 @@ export default function Page5() {
             <button
               onClick={prevSlide}
               aria-label="Previous Slide"
-              className="absolute z-40 left-4 top-1/2 -translate-y-1/2 bg-[#F2CF67] p-2 rounded-full RotateboxLeft"
+              className="absolute z-40 left-4 top-1/2 -translate-y-1/2 bg-[#f2cf67] p-2 rounded-full RotateboxLeft"
             >
               <img src="/Left-arrow.svg" alt="←" className="w-10" />
             </button>
