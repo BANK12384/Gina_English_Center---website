@@ -29,38 +29,41 @@ export default function Studentinfo() {
 
   useEffect(() => {
     const fetchData = async () => {
-      if (searchTerm.trim() === "") {
-        setResults([]);
+      const cleanSearch = searchTerm.trim();
+
+      const { data: student, error } = await supabase
+        .from('students')
+        .select('*')
+        .eq('username', cleanSearch)
+        .single();
+
+      if (!student) {
+        console.log("No match found");
+        setChartData([]);
         return;
       }
-      const { data, error } = await supabase
-        .from("english-score")
-        .select(
-          "reading, writing, gramma_vocab,listening,speaking, students(id)"
-        )
 
-        .eq("students.username", `${searchTerm}`);
-      if (error) {
-        console.error("Search error:", error);
+      // Now query the score
+      const { data: score } = await supabase
+        .from('english-score')
+        .select('reading, writing, gramma_vocab, listening, speaking')
+        .eq('student_id', student.id)
+        .single();
+
+      if (score) {
+        const chartData = Object.entries(score).map(([skill, value]) => ({
+          skill,
+          score: value,
+        }));
+        setChartData(chartData);
       } else {
-        setResults(data);
+        setChartData([]);
       }
     };
 
     const delayDebounce = setTimeout(() => {
       fetchData();
     }, 300);
-
-    if (results.length > 0) {
-      const raw = Object.entries(results[0])
-        .filter(([key]) => key !== "students")
-        .map(([skill, score]) => ({
-          skill,
-          score,
-        }));
-      console.log(raw);
-      setChartData(raw);
-    }
 
     return () => clearTimeout(delayDebounce);
   }, [searchTerm]);
@@ -103,7 +106,7 @@ export default function Studentinfo() {
 
           {/* Scrollable Chart Container */}
           <div className="overflow-y-auto max-h-[30rem] pr-2">
-            {results.length > 0 && chartData.length > 0 && (
+            {chartData.length > 0 && (
               <div className="flex flex-col justify-center items-center gap-8">
                 {/* Radar Chart */}
                 <div className=" p-6 flex flex-col items-center min-w-[350px] mt-4">
@@ -112,7 +115,7 @@ export default function Studentinfo() {
                   </h2>
                   <RadarChart
                     className="text-sm"
-                    
+
                     outerRadius={150}
                     width={800}
                     height={400}
@@ -211,7 +214,7 @@ export default function Studentinfo() {
 
           {/* Scrollable Chart Container */}
           <div className="overflow-y-auto max-h-[30rem] pr-2">
-            {results.length > 0 && chartData.length > 0 && (
+            {chartData.length > 0 && (
               <div className="flex flex-col justify-center items-center gap-4">
                 {/* Radar Chart */}
                 <div className=" p-6 flex flex-col items-center min-w-[350px] mt-4">
@@ -220,7 +223,7 @@ export default function Studentinfo() {
                   </h2>
                   <RadarChart
                     className="text-sm"
-                    
+
                     outerRadius={90}
                     width={800}
                     height={250}
