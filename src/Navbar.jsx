@@ -91,9 +91,6 @@ export default function HamburgerMenu() {
             <li className="py-3 lg:py-5 px-8 bg-[#F2CF67] text-white hover:bg-[#AF9D65] hover:border-2 hover:border-white">
               <Link to="/Student" onClick={toggleMenu}>Student Info</Link>
             </li>
-            <li className="py-3 lg:py-5 px-8 bg-[#F2CF67] text-white hover:bg-[#AF9D65] hover:border-2 hover:border-white">
-              <Link to="/Student2" onClick={toggleMenu}>Student Info2</Link>
-            </li>
           </ul>
 
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-black font-bold text-center">

@@ -10,7 +10,6 @@ import Page5 from "./Allpage/Page5.jsx";
 import Page6 from "./Allpage/Page6.jsx";
 import Contact from "./Allpage/Page7.jsx";
 import Studentinfo from "./Allpage/StudentInifo.jsx";
-import Studentinfo2 from "./Allpage/StudentInfo2.jsx";
 
 function ScrollToHashElement() {
   const { hash } = useLocation();
@@ -47,7 +46,6 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/Student" element={<Studentinfo />} />
-          <Route path="/Student2" element={<Studentinfo2 />} />
         </Routes>
       </div>
     </Router>
