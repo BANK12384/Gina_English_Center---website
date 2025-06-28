@@ -2,17 +2,21 @@ import { useState } from "react";
 import "../App.css";
 
 const slides = [
-  { imageUrl: "/img/Page41.svg" },
-  { imageUrl: "/img/Page42.svg" },
-  { imageUrl: "/img/Page43.svg" },
-  { imageUrl: "/img/Page44.svg" },
-  { imageUrl: "/img/Page45.svg" },
+  { imageUrl: "/Page5/View1.jpg" },
+  { imageUrl: "/Page5/View2.jpg" },
+  { imageUrl: "/Page5/View3.jpg" },
+  { imageUrl: "/Page5/View4.jpg" },
+  { imageUrl: "/Page5/View5.jpg" },
+  { imageUrl: "/Page5/View6.jpg" },
+  { imageUrl: "/Page5/View7.jpg" },
+  { imageUrl: "/Page5/View8.jpg" },
+  { imageUrl: "/Page5/View9.jpg" },
 ];
 
 function SlidePage5({ imageUrl }) {
   return (
     <div
-      className="top-0 left-0 w-full h-[90%] bg-center bg-cover bg-fixed z-0"
+      className="top-0 left-0 w-full h-[90%] bg-center bg-cover  z-0"
       style={{ backgroundImage: `url(${imageUrl})` }}
     />
   );

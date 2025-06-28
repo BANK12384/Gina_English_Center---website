@@ -33,6 +33,7 @@ const items2 = [
   },
 ];
 
+
 function Slide({ items, bgColor, imageUrl, openIndex, toggleAccordion }) {
   return (
     <div className="w-full h-full">
