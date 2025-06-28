@@ -4,32 +4,39 @@ import "../App.css";
 const items1 = [
   {
     title: "👨‍🏫 ครู จีน่า",
-    content: "– ครูสอนภาษาอังกฤษเจ้าของภาษามากประสบการณ์...",
+    content: "ครูสอนภาษาอังกฤษเจ้าของภาษามากประสบการณ์ เป็นอาจารย์สอนภาษาอังกฤษที่มีประสบการณ์สอนมากกว่า 10 ปี ทั้งในระดับโรงเรียน มหาวิทยาลัย และองค์กรธุรกิจ ด้วยพื้นฐานการสอนที่เข้าใจผู้เรียนเป็นอย่างดี เขาสามารถปรับวิธีการสอนให้เหมาะกับนักเรียนทุกระดับ ตั้งแต่เด็กเล็กไปจนถึงผู้ใหญ่",
   },
   {
     title: "🌍 ความเชี่ยวชาญของครู",
-    content: "React is a JavaScript library for building user interfaces.",
+    content: "✅ การสอนภาษาอังกฤษเพื่อการสื่อสารในชีวิตประจำวัน ",
+    content2: "✅ ภาษาอังกฤษเพื่อการทำงาน (Business English)",
+    content3: "✅ การออกเสียง (Pronunciation & Accent Training)",
+    content4: "✅ การสอนผ่านสื่อและเทคนิคที่ทันสมัย เช่น บทสนทนา เกม และภาพยนตร์",
+    content5: "✅ การสร้างบรรยากาศการเรียนที่สนุกสนานและได้ผลจริง",
   },
   {
     title: "🎯 ปรัชญาการสอน",
     content:
-      "An accordion is a vertically stacked set of collapsible content panels.",
+      "“ภาษาอังกฤษไม่ใช่แค่การเรียนรู้คำศัพท์และไวยากรณ์ แต่เป็นเครื่องมือในการสื่อสาร เปิดโอกาสใหม่ ๆ และสร้างความมั่นใจให้กับผู้เรียน”",
   },
 ];
 
 const items2 = [
   {
-    title: "พี่เพอร์",
-    content: "– ครูสอนภาษาอังกฤษรุ่นใหม่ ไฟแรง และเป็นกันเอง...",
+    title: "พี่เพอร์ลี่",
+    content: "ครูสอนภาษาอังกฤษรุ่นใหม่ ไฟแรง และเป็นกันเอง เป็นครูสอนภาษาอังกฤษรุ่นใหม่ที่เต็มไปด้วยพลังและความคิดสร้างสรรค์ ด้วยความเข้าใจนักเรียนยุคใหม่เป็นอย่างดี ทำให้เธอสามารถออกแบบการสอนที่สนุก ไม่น่าเบื่อ และช่วยให้ผู้เรียนกล้าพูดภาษาอังกฤษได้อย่างเป็นธรรมชาติ",
   },
   {
     title: "🔥 จุดเด่น",
-    content: "React is a JavaScript library for building user interfaces.",
+    content: "✅ เน้นการเรียนรู้ผ่านกิจกรรมที่สนุกและทันสมัย เช่น เกม วิดีโอ และโซเชียลมีเดีย",
+    content2: "✅ เข้าใจผู้เรียนวัยรุ่นและสามารถปรับเนื้อหาให้เหมาะกับแต่ละบุคคล",
+    content3: "✅ สอนภาษาอังกฤษผ่านสถานการณ์จริง ให้ใช้งานได้ทันที",
+    content4: "✅ ช่วยให้ผู้เรียนกล้าพูด และสร้างความมั่นใจในการใช้ภาษาอังกฤษ",
   },
   {
     title: "💡 คติประจำใจ",
     content:
-      "An accordion is a vertically stacked set of collapsible content panels.",
+      "“ภาษาอังกฤษไม่ใช่วิชาเรียนที่น่าเบื่อ แต่เป็นทักษะที่ช่วยให้คุณเปิดโลกกว้าง และสร้างโอกาสใหม่ ๆ ให้ตัวเอง!”",
   },
 ];
 
@@ -64,6 +71,10 @@ function Slide({ items, bgColor, imageUrl, openIndex, toggleAccordion }) {
                   style={{ backgroundColor: bgColor }}
                 >
                   <p className="text-xl Thai-light">{item.content}</p>
+                  <p className="text-xl Thai-light">{item.content2}</p>
+                  <p className="text-xl Thai-light">{item.content3}</p>
+                  <p className="text-xl Thai-light">{item.content4}</p>
+                  <p className="text-xl Thai-light">{item.content5}</p>
                 </div>
               )}
             </div>
@@ -165,7 +176,7 @@ export default function Page3() {
             <Slide
               items={items2}
               bgColor="#E66291"
-              imageUrl="./img/BG-Hone.png"
+              imageUrl="./P-jay.jpg"
               openIndex={openIndex2}
               toggleAccordion={toggleAccordion2}
             />
