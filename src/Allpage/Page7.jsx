@@ -66,9 +66,9 @@ export default function Contact() {
             📞 <span className="Thai-EX text-[#24149B]">ติดต่อเรา :</span>{" "}
             089-788-0964
           </p>
-          <p className="lg:w-[90%] xl:w-[80%] flex sm:hidden">
+          <p className="lg:w-[90%] xl:w-[80%] flex flex-row sm:hidden">
             📍 <span className="Thai-EX text-[#24149B]">ที่ตั้ง :</span> 253/969
-            ถ.เคหะร่มเกล้า64 เขต ลาดกระบัง<br/><span className="ml-14">แขวง คลองสองต้นนุ่น</span>
+            ถ.เคหะร่มเกล้า64 เขต ลาดกระบัง <br/> แขวง คลองสองต้นนุ่น
           </p>
           <p className="lg:w-[90%] xl:w-[80%] hidden sm:flex">
             📍 <span className="Thai-EX text-[#24149B]">ที่ตั้ง :</span> 253/969

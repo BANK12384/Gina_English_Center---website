@@ -110,6 +110,10 @@ function Slide({ items, bgColor, imageUrl, openIndex, toggleAccordion }) {
                   style={{ backgroundColor: bgColor }}
                 >
                   <p className="text-sm Thai-light">{item.content}</p>
+                  <p className="text-sm Thai-light">{item.content2}</p>
+                  <p className="text-sm Thai-light">{item.content3}</p>
+                  <p className="text-sm Thai-light">{item.content4}</p>
+                  <p className="text-sm Thai-light">{item.content5}</p>
                 </div>
               )}
             </div>
@@ -221,7 +225,7 @@ export default function Page3() {
             <Slide
               items={items2}
               bgColor="#E66291"
-              imageUrl="./img/BG-Hone.png"
+              imageUrl="./P-jay.jpg"
               openIndex={openIndex2}
               toggleAccordion={toggleAccordion2}
             />
