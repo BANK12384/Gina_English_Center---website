@@ -22,15 +22,15 @@ export default function Contact() {
             089-788-0964
           </p>
           <p className="lg:w-[90%] xl:w-[80%] inline-block xl:hidden">
-            📍 <span className="Thai-EX text-[#24149B]">ที่ตั้ง :</span> 253/969
+            📍 <span className="Thai-EX text-[#24149B]">ที่ตั้ง : </span> 253/969
             ถ.เคหะร่มเกล้า64 เขต ลาดกระบัง <br/> <span className="ml-[9rem]">แขวง คลองสองต้นนุ่น</span>
           </p>
           <p className="lg:w-[90%] xl:w-[80%] xl:inline-block hidden">
-            📍 <span className="Thai-EX text-[#24149B]">ที่ตั้ง :</span> 253/969
+            📍 <span className="Thai-EX text-[#24149B]">ที่ตั้ง : </span> 253/969
             ถ.เคหะร่มเกล้า64 เขต ลาดกระบัง แขวง คลองสองต้นนุ่น
           </p>
           <p className="lg:w-[90%] xl:w-[80%]">
-            📌 <span className="Thai-EX text-[#24149B]">Facebook :</span> Gina
+            📌 <span className="Thai-EX text-[#24149B]">Facebook : </span> Gina
             English Center
           </p>
         </div>
@@ -58,24 +58,24 @@ export default function Contact() {
       <div className="w-full h-full flex flex-col lg:flex-none lg:hidden  place-content-center justify-center items-center content-center ">
         <div className="w-full h-[9rem] items-center flex-col flex place-content-center ">
           <h1 className="Thai text-2xl text-center ">ช่องทางติดต่อ</h1>
-          <div className="w-[40%] self-center bg-black h-1 rounded-full mb-0"></div>
+          <div className="w-[40%] sm:w-[25%] md:w-[20%] self-center bg-black h-1 rounded-full mb-0"></div>
         </div>
 
         <div className="w-full h-[15rem] text-left text-sm sm:text-xl Thai-light flex flex-col content-center  justify-center items-center self-center">
           <p className="lg:w-[90%] xl:w-[80%] ">
-            📞 <span className="Thai-EX text-[#24149B]">ติดต่อเรา :</span>{" "}
+            📞 <span className="Thai-EX text-[#24149B]">ติดต่อเรา : </span>{" "}
             089-788-0964
           </p>
           <p className="lg:w-[90%] xl:w-[80%] flex flex-row sm:hidden">
-            📍 <span className="Thai-EX text-[#24149B]">ที่ตั้ง :</span> 253/969
+            📍 <span className="Thai-EX text-[#24149B]">ที่ตั้ง : </span> 253/969
             ถ.เคหะร่มเกล้า64 เขต ลาดกระบัง <br/> แขวง คลองสองต้นนุ่น
           </p>
           <p className="lg:w-[90%] xl:w-[80%] hidden sm:flex">
-            📍 <span className="Thai-EX text-[#24149B]">ที่ตั้ง :</span> 253/969
+            📍 <span className="Thai-EX text-[#24149B]">ที่ตั้ง : </span> 253/969
             ถ.เคหะร่มเกล้า64 เขต ลาดกระบัง แขวง คลองสองต้นนุ่น
           </p>
           <p className="lg:w-[90%] xl:w-[80%]">
-            📌 <span className="Thai-EX text-[#24149B]">Facebook :</span> Gina
+            📌 <span className="Thai-EX text-[#24149B]">Facebook : </span> Gina
             English Center
           </p>
         </div>
