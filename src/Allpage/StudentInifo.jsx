@@ -26,6 +26,8 @@ export default function Studentinfo() {
   const [searchTerm, setSearchTerm] = useState("");
   const [results, setResults] = useState([]);
   const [chartData, setChartData] = useState([]);
+  const [radarData, setRadarData] = useState([]);
+  const [isAll, setIsAll] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -43,21 +45,51 @@ export default function Studentinfo() {
         return;
       }
 
-      // Now query the score
-      const { data: score } = await supabase
-        .from('english-score')
-        .select('reading, writing, gramma_vocab, listening, speaking')
-        .eq('student_id', student.id)
-        .single();
+      setIsAll(student.is_all)
 
-      if (score) {
-        const chartData = Object.entries(score).map(([skill, value]) => ({
-          skill,
-          score: value,
-        }));
-        setChartData(chartData);
+      if (student['is_all']) {
+        const { data: total_score } = await supabase
+          .from('total-score')
+          .select('science, maths, english, exam_date')
+          .eq('student_id', student.id)
+          .order('exam_date', { ascending: false });
+
+        if (total_score) {
+          const chartData = total_score.map((item) => ({
+            exam_date: item.exam_date,
+            Science: item.science,
+            Maths: item.maths,
+            English: item.english,
+
+          }))
+          const chartData2 = [
+            { skill: 'English', score: total_score[0].english },
+            { skill: 'Maths', score: total_score[0].maths },
+            { skill: 'Science', score: total_score[0].science },
+          ]
+
+          setChartData(chartData)
+          setRadarData(chartData2)
+        } else {
+          setChartData([]);
+        }
       } else {
-        setChartData([]);
+        // Now query the score
+        const { data: score } = await supabase
+          .from('english-score')
+          .select('reading, writing, gramma_vocab, listening, speaking')
+          .eq('student_id', student.id)
+          .single();
+
+        if (score) {
+          const chartData = Object.entries(score).map(([skill, value]) => ({
+            skill,
+            score: value,
+          }));
+          setChartData(chartData);
+        } else {
+          setChartData([]);
+        }
       }
     };
 
@@ -106,7 +138,7 @@ export default function Studentinfo() {
 
           {/* Scrollable Chart Container */}
           <div className="overflow-y-auto max-h-[30rem] pr-2">
-            {chartData.length > 0 && (
+            {radarData.length > 0 && (
               <div className="flex flex-col justify-center items-center gap-8">
                 {/* Radar Chart */}
                 <div className=" p-6 flex flex-col items-center min-w-[350px] mt-4">
@@ -119,7 +151,7 @@ export default function Studentinfo() {
                     outerRadius={150}
                     width={800}
                     height={400}
-                    data={chartData}
+                    data={radarData}
                   >
                     <PolarGrid stroke="#e5e7eb" />
                     <PolarAngleAxis dataKey="skill" stroke="#4b5563" />
@@ -137,9 +169,41 @@ export default function Studentinfo() {
                     />
                   </RadarChart>
                 </div>
-
+                {isAll && (
+                  <div className="p-6 flex flex-col items-center min-w-[450px] mt-[-2rem] mb-[10rem]">
+                    <h2 className="text-xl font-semibold text-gray-700 mb-4">
+                      Skill Scores
+                    </h2>
+                    <BarChart
+                      className="text-sm"
+                      width={400}
+                      height={250}
+                      data={chartData}
+                      margin={{ top: 10, right: 20, left: -10, bottom: 5 }}
+                    >
+                      <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+                      <XAxis
+                        dataKey="exam_date"
+                        stroke="#4b5563"
+                        tick={{ fontSize: 12, fill: "#374151" }}
+                        axisLine={{ stroke: "#d1d5db" }}
+                      />
+                      <YAxis
+                        domain={[0, 30]}
+                        stroke="#4b5563"
+                        tick={{ fontSize: 12, fill: "#374151" }}
+                        axisLine={{ stroke: "#d1d5db" }}
+                      />
+                      <Tooltip />
+                      <Legend wrapperStyle={{ fontSize: 12 }} />
+                      <Bar dataKey="Science" fill="#F2CF67" radius={[4, 4, 0, 0]} barSize={20} />
+                      <Bar dataKey="Maths" fill="#67B7F2" radius={[4, 4, 0, 0]} barSize={20} />
+                      <Bar dataKey="English" fill="#A267F2" radius={[4, 4, 0, 0]} barSize={20} />
+                    </BarChart>
+                  </div>
+                )}
                 {/* Bar Chart */}
-                <div className=" p-6  flex flex-col items-center min-w-[450px] mb-10">
+                {/* <div className=" p-6  flex flex-col items-center min-w-[450px] mb-10">
                   <h2 className="text-xl font-semibold text-gray-700 mb-4">
                     Skill Scores
                   </h2>
@@ -172,7 +236,7 @@ export default function Studentinfo() {
                       barSize={28}
                     />
                   </BarChart>
-                </div>
+                </div> */}
               </div>
             )}
           </div>
@@ -227,7 +291,7 @@ export default function Studentinfo() {
                     outerRadius={90}
                     width={800}
                     height={250}
-                    data={chartData}
+                    data={radarData}
                   >
                     <PolarGrid stroke="#e5e7eb" />
                     <PolarAngleAxis dataKey="skill" stroke="#4b5563" />
@@ -245,9 +309,42 @@ export default function Studentinfo() {
                     />
                   </RadarChart>
                 </div>
-
                 {/* Bar Chart */}
-                <div className=" p-6  flex flex-col items-center min-w-[450px] mt-[-2rem] mb-[10rem]">
+                {isAll && (
+                  <div className="p-6 flex flex-col items-center min-w-[450px] mt-[-2rem] mb-[10rem]">
+                    <h2 className="text-xl font-semibold text-gray-700 mb-4">
+                      Skill Scores
+                    </h2>
+                    <BarChart
+                      className="text-sm"
+                      width={400}
+                      height={250}
+                      data={chartData}
+                      margin={{ top: 10, right: 20, left: -10, bottom: 5 }}
+                    >
+                      <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+                      <XAxis
+                        dataKey="exam_date"
+                        stroke="#4b5563"
+                        tick={{ fontSize: 12, fill: "#374151" }}
+                        axisLine={{ stroke: "#d1d5db" }}
+                      />
+                      <YAxis
+                        domain={[0, 30]}
+                        stroke="#4b5563"
+                        tick={{ fontSize: 12, fill: "#374151" }}
+                        axisLine={{ stroke: "#d1d5db" }}
+                      />
+                      <Tooltip />
+                      <Legend wrapperStyle={{ fontSize: 12 }} />
+                      <Bar dataKey="Science" fill="#F2CF67" radius={[4, 4, 0, 0]} barSize={20} />
+                      <Bar dataKey="Maths" fill="#67B7F2" radius={[4, 4, 0, 0]} barSize={20} />
+                      <Bar dataKey="English" fill="#A267F2" radius={[4, 4, 0, 0]} barSize={20} />
+                    </BarChart>
+                  </div>
+                )}
+
+                {/* <div className=" p-6  flex flex-col items-center min-w-[450px] mt-[-2rem] mb-[10rem]">
                   <h2 className="text-xl font-semibold text-gray-700 mb-4">
                     Skill Scores
                   </h2>
@@ -280,7 +377,7 @@ export default function Studentinfo() {
                       barSize={28}
                     />
                   </BarChart>
-                </div>
+                </div> */}
               </div>
             )}
           </div>
